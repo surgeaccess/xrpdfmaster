@@ -1,0 +1,62 @@
+@mixin fill-available-width() {
+    width: 1;
+    width: 100%;
+    width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    width: -moz-available; /* WebKit-based browsers will ignore this. */
+}
+
+@mixin fill-available-height() {
+    height: 1;
+    height: 100%;
+    height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    height: -moz-available; /* WebKit-based browsers will ignore this. */
+}
+
+.link-popup {
+    object-fit: fill;
+    right: 0;
+    bottom: 0;
+    @include fill-available-width();
+    @include fill-available-height();
+}
+
+.modal-ctn,
+.modal-ctn.annot {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: flex-end;
+    align-items: flex-end;
+    top: 12%;
+    left: 8%;
+    max-height: 65%;
+    max-width: 60%;
+    z-index: 12;
+    background-color: white;
+}
+
+.modal-ctn.annot {
+    min-height: 35%;
+    min-width: 30%;
+}
+
+.modal-action-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 5px 0px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    cursor: move;
+}
+
+.close-icon {
+    margin-right: 10px;
+    padding: 0px 5px;
+    max-width: 5rem;
+}
