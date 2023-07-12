@@ -1,0 +1,3 @@
+[submodule "pdfHlt"]
+	path = src/custom-libs/react-pdf-highlighter
+	url = git@github.com:surgeaccess/react-pdf-highlighter.git
